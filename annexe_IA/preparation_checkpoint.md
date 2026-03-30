@@ -7,6 +7,12 @@
 **Prompt 1 — Structuration des idées**
 
 Je bosse sur un MVT en master LeadDev sur "LLM en entreprise : RAG vs Fine-tuning vs Agents". J'ai des idées de problématique et d'hypothèses mais j'arrive pas à les formuler de façon testable. Aide moi à les structurer en tableau markdown avec pour chaque hypothèse ce qu'on mesure et comment on teste. Dis moi aussi si mes hypothèses tiennent la route ou si elles sont trop vagues / pas falsifiables.
+Ma problématique : en gros quand t'es lead dev et que tu veux coller un LLM sur tes docs d'entreprise, tu pars sur quoi ? RAG, fine-tuning, agents ? c'est quoi le plus fiable sans que ça explose en coût et en maintenance ?
+Mes hypothèses :
+- un RAG avec du reranking et des citations c'est mieux qu'un RAG basique
+- le fine-tuning ça vaut le coup que si t'as du contenu vraiment technique sinon le RAG suffit
+- les agents pour du Q&A sur des docs c'est overkill, plus cher et plus lent pour rien
+
 
 **Prompt 2 — Sources**
 
