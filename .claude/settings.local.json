@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p mvt ai evidence/scripts evidence/data evidence/results evidence/notebooks adr journal podcast src)",
+      "Bash(git mv:*)",
+      "Bash(rmdir annexe_IA Interviews)",
+      "Bash(touch evidence/scripts/.gitkeep evidence/data/.gitkeep evidence/results/.gitkeep evidence/notebooks/.gitkeep adr/.gitkeep journal/.gitkeep podcast/.gitkeep src/.gitkeep mvt/.gitkeep)",
+      "Bash(git add:*)"
+    ]
+  }
+}
