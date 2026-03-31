@@ -28,5 +28,4 @@ Quelle approche (RAG, fine-tuning, agents) offre le meilleur compromis fiabilit�
 **À compléter (2 restantes)** : paper hallucinations LLM, benchmark MTEB (embeddings)
 
 ## Contacts podcast
-
-*(à compléter)*
+[CONTACTS-POUR-LES-INTERVIEWS.md](./Interviews/CONTACTS-POUR-LES-INTERVIEWS.md)
