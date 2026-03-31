@@ -5,7 +5,14 @@
       "Bash(git mv:*)",
       "Bash(rmdir annexe_IA Interviews)",
       "Bash(touch evidence/scripts/.gitkeep evidence/data/.gitkeep evidence/results/.gitkeep evidence/notebooks/.gitkeep adr/.gitkeep journal/.gitkeep podcast/.gitkeep src/.gitkeep mvt/.gitkeep)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(python3:*)",
+      "Bash(python -c \"import pdfplumber; pdf = pdfplumber.open\\(''''C:/Users/turbo/OneDrive/Bureau/LLM-en-entreprise/journal/2510.13910v1.pdf''''\\); [print\\(p.extract_text\\(\\)\\) for p in pdf.pages[:5]]\")",
+      "Bash(python -c \"import pypdf; r = pypdf.PdfReader\\(''''C:/Users/turbo/OneDrive/Bureau/LLM-en-entreprise/journal/2510.13910v1.pdf''''\\); [print\\(r.pages[i].extract_text\\(\\)\\) for i in range\\(min\\(5, len\\(r.pages\\)\\)\\)]\")",
+      "Bash(python -c \"import PyPDF2; r = PyPDF2.PdfReader\\(''''C:/Users/turbo/OneDrive/Bureau/LLM-en-entreprise/journal/2510.13910v1.pdf''''\\); [print\\(r.pages[i].extract_text\\(\\)\\) for i in range\\(min\\(5, len\\(r.pages\\)\\)\\)]\")",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import pypdf; r = pypdf.PdfReader\\(''C:/Users/turbo/OneDrive/Bureau/LLM-en-entreprise/journal/2510.13910v1.pdf''\\); print\\(f''{len\\(r.pages\\)} pages''\\); [print\\(r.pages[i].extract_text\\(\\)\\) for i in range\\(min\\(5, len\\(r.pages\\)\\)\\)]\")",
+      "Bash(python:*)"
     ]
   }
 }
