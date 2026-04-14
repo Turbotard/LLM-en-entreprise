@@ -1,49 +1,60 @@
-# 03_Guide_Podcast_Interview_MVT.md
+# 03_Guide_Podcast_Interview_MVT_v2.md
 ## Guide pratique — Podcast/Interview (obligatoire) — MVT LeadDev
+
+### Deadline
+Le podcast fait partie du pack **MVT + Podcast à rendre le 20/06/2026 23:59**.
 
 ### But
 L’interview doit :
 - confronter vos hypothèses au terrain / à la recherche,
 - apporter des contraintes réelles (coût, sécurité, orga, dette),
-- alimenter votre dossier de preuves (décisions, métriques, risques).
+- alimenter votre mémoire (décisions, risques, arbitrages).
 
 ---
 
-## 1) Format attendu
-### Livrables
-- `podcast_episode.mp3`
-- `show_notes.md` (obligatoire)
-- Optionnel : `transcript.txt` + “best-of” nettoyé.
+## 1) Formats autorisés (équité)
+### Option A — Épisode unique
+- **18 à 25 minutes** recommandé.
 
-### Show notes (obligatoire)
-- Titre + invité(s) + date + durée
-- 5 “takeaways” (points clés)
-- 3 timestamps (00:00 / 05:20 / 12:40…)
-- 5 liens (dont 2 sources primaires si possible)
-- 3 phrases : “impact sur H1/H2/H3”
+### Option B — Mini-série (si plusieurs intervenants)
+Pour éviter de pénaliser un groupe qui fait plusieurs interviews :
+- **2 à 3 épisodes max**
+- **8 à 12 minutes par épisode**
+- Total recommandé : **20 à 30 minutes max**
 
 ---
 
-## 2) Trouver un invité : méthodes qui marchent
-### Cibles pro (souvent accessibles)
+## 2) Livrables
+- Audio : `.mp3` (128–192 kbps)
+- `show_notes.md` :
+  - titre + invité(s) + date + durée
+  - 5 takeaways
+  - 3 timestamps
+  - 5 liens (dont au moins 2 sources primaires si possible)
+  - “Impact sur H1/H2/H3” (3 phrases)
+
+---
+
+## 3) Trouver un invité : méthodes qui marchent
+### Cibles pro (accessibles)
 - Staff/Lead engineers, SRE, AppSec, Platform engineers
-- ESN spécialisées, éditeurs/outilleurs (observabilité, sécu, IA)
+- ESN/outilleurs (observabilité, sécu, IA)
 - Meetups / conférences (speakers)
 
 ### Cibles recherche
 - Doctorants (souvent plus accessibles)
 - Équipes universitaires / labs
-- Auteurs de papers (contact “corresponding author”)
+- Auteurs de papers (corresponding author)
 
 ---
 
-## 3) Contacter un invité : scripts efficaces
+## 4) Contacter un invité : scripts efficaces
 ### Email (court)
 Objet : Interview (20 min) — Sujet [X] — MVT LeadDev
 
 Bonjour [Nom],
 Je suis étudiant(e) en M1/M2I LeadDev. Avec mon groupe, nous travaillons sur [sujet] et nous aimerions vous interviewer 20 minutes pour confronter nos hypothèses à la réalité du terrain/recherche.
-Format : podcast pédagogique, non commercial, livré le 01/06/2026. Anonymisation possible.
+Format : podcast pédagogique, non commercial. Anonymisation possible.
 Créneaux : [3 créneaux]. Nous nous adaptons.
 Merci,
 [Prénom Nom] — [école] — [tel]
@@ -53,7 +64,7 @@ Bonjour [Nom], je suis en M1/M2I LeadDev. MVT sur [sujet]. Seriez-vous partant(e
 
 ---
 
-## 4) Préparer l’interview : checklist
+## 5) Préparer l’interview : checklist
 ### Avant
 - 8 à 12 questions max.
 - Envoyer 3 questions “phare” à l’invité.
@@ -68,20 +79,13 @@ Bonjour [Nom], je suis en M1/M2I LeadDev. MVT sur [sujet]. Seriez-vous partant(e
   - “Qu’est-ce qui coûte cher ?”
   - “Quel risque sous-estimé ?”
 - Questions actionnables :
-  - “2 métriques de succès ?”
-  - “Quel test pour prouver que ça marche ?”
+  - “2 métriques/indicateurs de succès ?”
+  - “Quel test ou quelle preuve te convaincrait ?”
 
 ### Après
 - Nettoyer audio (coupes + bruit).
 - Écrire show notes.
-- Extraire 3 points qui modifient vos hypothèses/protocoles.
-
----
-
-## 5) Outils simples
-- Enregistrement distanciel : Zoom/Meet (tester AVANT).
-- Enregistrement présentiel : smartphone + micro cravate si possible.
-- Transcript : Whisper (ou équivalent) + correction légère sur passages cités.
+- Extraire 3 points qui modifient vos hypothèses/protocoles/risques.
 
 ---
 
@@ -90,4 +94,3 @@ Bonjour [Nom], je suis en M1/M2I LeadDev. MVT sur [sujet]. Seriez-vous partant(e
 - Aucun lien avec vos hypothèses : interdit.
 - Audio inaudible : test micro obligatoire.
 - Pas de consentement : interdit.
-

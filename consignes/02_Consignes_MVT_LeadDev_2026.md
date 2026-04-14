@@ -1,184 +1,208 @@
-# 02_Consignes_MVT_LeadDev_2026.md
-## Consignes officielles — MVT + Dossier de preuves + Démo (LeadDev M1/M2I)
+# 02_Consignes_MVT_LeadDev_2026_v2.md
+## Consignes officielles — MVT + Podcast + Soutenance (LeadDev M1/M2I)
 
 ### Objectif (clair)
-Vous ne me vendez pas une “tendance”. Vous **prouvez** quelque chose :
+Vous ne me vendez pas une “tendance”. Vous **argumentez** une décision LeadDev **avec des preuves** :
 - hypothèses **falsifiables**,
 - **sources primaires**,
-- protocole **reproductible**,
-- résultats **mesurés**,
-- défense **argumentée**.
+- protocole de validation (mesure/expérimentation/analyse) **explicite**,
+- limites et contre-arguments **assumés**,
+- recommandation finale **actionnable**.
+
+> On oublie l’ancienne logique “proto + démo”. **Aucune démonstration logicielle n’est attendue**.  
+> Si vous faites des expérimentations (bench, tests, comparatifs), elles doivent être **documentées** et **reproductibles** (annexe).
 
 ### IA (autorisé, mais tracé)
 L’IA est **autorisée**. Le copier-coller déguisé, non.
 - Vous devez fournir une **annexe IA** avec :
   - vos **prompts** (copiés-collés),
-  - les extraits utiles de réponses,
+  - les extraits utiles,
   - ce que vous avez **gardé / jeté**,
-  - et **pourquoi** (justification technique, qualité, contraintes, cohérence).
-- Sans annexe IA : la partie “démarche” est considérée **non démontrée** (voir grille de notation).
+  - et **pourquoi** (qualité, cohérence, contraintes, risques).
+- Sans annexe IA : la démarche est considérée **non démontrée**.
 
 ---
 
 ## 1) Livrables & Dates
-### A. Podcast / Interview (obligatoire)
-- **À rendre : 01/06/2026**
-- Format :
-  - **Au moins 1 invité** (chercheur/pro en lien direct avec le sujet).
-  - Durée recommandée : **15 à 25 min**.
-  - Audio : `.mp3` (128–192 kbps) + `show_notes.md`.
-  - Le podcast doit alimenter votre MVT : **3 citations courtes max** + analyse (pas du name-dropping).
-- Bonus utile : transcript auto + nettoyage partiel.
+### A. Pack MVT + Podcast (obligatoire)
+- **À rendre : 20/06/2026 23:59**
+- Contenu :
+  - `MVT.pdf` (export du mémoire)
+  - le podcast (fichier(s) audio) + `show_notes.md`
+  - l’annexe IA `ai/ai_usage.md`
+  - le dépôt Git accessible (lien + structure propre)
 
-### B. Document MVT + Dossier de preuves
-- **À rendre : 10/06/2026 23:59**
-- Format :
-  - `MVT.pdf` (export) + sources en Markdown dans le repo.
-  - Dossier de preuves dans le repo (`/evidence/`).
-
-### C. Soutenance finale + Démo + Slides + Git accessible
-- **01/07/2026**
-- Slides : `slides.pdf` ou `pptx`.
-- Repo : lien + tag/release `v1.0-soutenance`.
+### B. Soutenance orale (obligatoire)
+- **Date : 01/07/2026**
+- **Durée : 30 minutes minimum — 40 minutes maximum**
+  - Recommandation : 25–30 min exposé + 5–10 min questions (selon dynamique).
+- Support de présentation attendu (PDF ou PPTX).
 
 ---
 
-## 2) Structure obligatoire du document (MVT)
-> Le MVT doit être lisible. Mais c’est le **dossier de preuves** qui fait foi.
+## 2) Podcast : format et durée (raisonnable et équitable)
+Objectif : confronter vos hypothèses au réel (terrain/recherche) et alimenter votre MVT.
 
-### 2.1 Page 1 — Synthèse (MAX 1 page)
+### Format possible 1 — 1 épisode unique
+- **Durée recommandée : 18 à 25 minutes**
+- 1 invité minimum (pro/chercheur en lien direct).
+
+### Format possible 2 — Mini-série (si plusieurs intervenants)
+Pour ne pas pénaliser les groupes qui interviewent plusieurs personnes :
+- **2 à 3 épisodes max**
+- **Durée recommandée par épisode : 8 à 12 minutes**
+- Total recommandé : **20 à 30 minutes max** (toutes pistes confondues)
+
+### Livrables podcast
+- Audio : `.mp3` (128–192 kbps)
+- `show_notes.md` contenant :
+  - titre + invité(s) + date + durée
+  - 5 takeaways
+  - 3 timestamps
+  - 5 liens (dont au moins 2 sources primaires si possible)
+  - “Ce que ça change dans H1/H2/H3” (3 phrases)
+
+### Exploitation obligatoire dans le MVT
+- 3 citations courtes max, **analysées** (pas de name-dropping).
+- Les points issus du podcast doivent impacter au moins **une** de ces choses :
+  - hypothèses,
+  - protocole de validation,
+  - risques/contre-arguments,
+  - recommandation finale.
+
+---
+
+## 3) Structure obligatoire du mémoire (MVT)
+### 3.1 Page 1 — Synthèse (MAX 1 page)
 Contenu minimum :
 - Problématique (1 paragraphe).
 - 3 hypothèses (H1/H2/H3) + ce que vous cherchez à prouver.
-- Résultat en une phrase par hypothèse (validée / infirmée / incertaine).
-- Reco finale (décision) : “Si j’étais LeadDev, je ferais X / je ne ferais pas Y, parce que…”.
+- Résultat (validée / infirmée / incertaine) + justification courte.
+- Recommandation finale (décision LeadDev) : “Je ferais X / je ne ferais pas Y, parce que…”.
 
-### 2.2 Table Hypothèses (obligatoire)
-Format imposé :
-
-| Hypothèse | Indicateur mesurable | Protocole de test | Résultat | Niveau de confiance |
+### 3.2 Table Hypothèses (obligatoire)
+| Hypothèse | Indicateur mesurable | Protocole de validation | Résultat | Niveau de confiance |
 |---|---|---|---|---|
 
 Règles :
-- Une hypothèse = testable = réfutable.
-- “Niveau de confiance” doit être justifié (taille d’échantillon, biais, limites).
+- Hypothèse = testable = réfutable.
+- “Niveau de confiance” justifié (biais, limites, portée).
 
-### 2.3 Table Claims → Sources (obligatoire)
-Format imposé :
-
+### 3.3 Table Claims → Sources (obligatoire)
 | Claim (affirmation) | Source primaire | Pourquoi crédible | Limites / biais |
 |---|---|---|---|
 
 Règles :
 - “Source primaire” = paper, RFC/spec, doc officielle, repo officiel, standard, benchmark publié.
-- Vous pouvez citer des secondaires, mais **elles ne remplacent jamais** la primaire.
+- Les secondaires sont autorisées **en appui**, jamais en base unique.
 
-### 2.4 Contre-arguments (obligatoire)
-- **3 objections sérieuses** (pas des hommes de paille).
+### 3.4 Contre-arguments (obligatoire)
+- 3 objections sérieuses (pas des hommes de paille).
 - Pour chaque objection :
   - réponse,
-  - et **ce qui vous ferait changer d’avis** (condition de falsification).
+  - **ce qui vous ferait changer d’avis** (condition de falsification).
 
-### 2.5 Conclusion opérationnelle
-- Une décision (même si c’est “on ne sait pas encore, donc on ne déploie pas”).
-- Un plan de suite : prochain test à faire, risque à réduire, etc.
-
----
-
-## 3) Dossier de preuves (obligatoire)
-Le dossier de preuves doit permettre à un tiers de **reproduire** votre résultat.
-
-### 3.1 Reproductibilité
-À fournir :
-- Script de reproduction : `Dockerfile` + `docker compose` **ou** `Makefile`.
-- Données/inputs : dataset, jeux d’entrées, générateur, ou mocks.
-- Métriques : définition + comment elles sont collectées.
-- Benchmark : au moins 2 configurations comparées (A vs B).
-
-### 3.2 “Un test qui rate” (obligatoire)
-Vous devez montrer :
-- 1 edge-case qui casse votre système (ou révèle un risque majeur),
-- pourquoi ça rate (hypothèse causale),
-- correctif **ou** décision assumée (contournement/changement de scope), avec justification.
-
-### 3.3 Structure repo recommandée
-```
-/README.md
-/mvt/                 # mémoire (md) + export pdf
-/evidence/            # preuves reproductibles
-  /scripts/
-  /data/              # ou générateur
-  /results/
-  /notebooks/         # optionnel
-/adr/                 # décisions structurantes (1 page max)
-/journal/             # 10 entrées datées
-/podcast/             # audio + show notes
-/src/                 # proto
-/ai/                  # annexe IA (prompts + choix gardés/jetés)
-```
+### 3.5 Conclusion opérationnelle
+- Une décision (y compris “on ne déploie pas pour l’instant”).
+- Un plan de suite : tests/prochaines étapes, risques à réduire, conditions de go/no-go.
 
 ---
 
-## 4) Git : exigences minimales
-### 4.1 Commits
+## 4) Annexes de preuves (fortement recommandé)
+Pas de démo imposée, mais vos preuves doivent être auditables.
+Exemples acceptés :
+- comparatifs chiffrés (perf/latence/coût/qualité),
+- matrices de risques,
+- tests de conformité,
+- protocoles d’évaluation,
+- retours terrain (podcast) + confrontation aux sources primaires.
+
+Si vous fournissez du code/outillage de mesure :
+- ajoutez une note “comment reproduire” (1 commande si possible).
+
+---
+
+## 5) Git : exigences minimales (traçabilité)
+### 5.1 Commits
 - Commits réguliers (pas 1 commit la veille).
 - Messages lisibles.
 
-### 4.2 Issues
-- Minimum : 10 issues par groupe.
+### 5.2 Issues (minimum)
+- Minimum : 10 issues par groupe (tâches, décisions, risques).
 - Chaque issue a une conclusion (done / wontfix / blocked).
 
-### 4.3 ADR (Architecture Decision Records)
-- 1 décision = 1 ADR max 1 page.
-- Minimum : 5 ADR (stack, protocole de test, métriques, architecture, sécurité/risques).
+### 5.3 ADR (Architecture Decision Records) — courtes
+- 1 décision = 1 ADR, **1 page max**.
+- Minimum : 5 ADR.
 - Format : Contexte / Décision / Alternatives / Conséquences.
 
-### 4.4 Journal de veille (10 entrées datées)
+### 5.4 Journal de veille (10 entrées datées)
 Format imposé :
 - Date
 - Ce que j’ai lu (avec lien/source primaire)
 - Ce que j’ai compris (résumé perso)
-- Ce que ça change dans notre proto (action/décision)
+- Ce que ça change dans notre MVT (action/décision)
 
----
-
-## 5) IA : annexe obligatoire
-Fichier `ai/ai_usage.md` :
+### 5.5 Annexe IA (obligatoire)
+Fichier : `ai/ai_usage.md`
 - Prompts (copiés-collés).
-- Résultats utiles (extraits).
-- **Décision** : gardé/jeté + pourquoi (qualité, compat, sécurité, perf, coût, maintenabilité).
-- Limites/risques : où l’IA peut vous induire en erreur sur votre sujet.
+- Extraits utiles.
+- **Décision** : gardé/jeté + pourquoi.
+- Limites/risques : où l’IA peut vous induire en erreur.
 
 ---
 
-## 6) Soutenance : attentes
-- Présentation + démo + questions.
-- Slides = support, pas roman.
-- Démo :
-  - tourne sur machine neutre (ou docker),
-  - montre métriques + benchmark + test qui rate,
-  - montre le dossier de preuves dans le repo.
+## 6) Relecture pair-à-pair (obligatoire)
+### Principe
+Chaque groupe a un ou plusieurs “reviewers” (assignés). Les reviewers doivent faire des retours réguliers pour éviter le rendu “one shot”.
+
+### Fréquence reviewers
+- Les reviewers déposent des retours **tous les 15 du mois**, jusqu’au 01/07/2026 :
+  - 15/02, 15/03, 15/04, 15/05, 15/06 (et éventuellement 15/07 si prolongation — non prévu ici)
+
+### Fréquence PO (feedback intervenant)
+- Feedback PO (moi) **15 jours avant** chaque journée de suivi :
+  - **15/03/2026** (avant le 31/03)
+  - **15/06/2026** (avant le 17/06)
+
+### Format attendu d’une review (simple et utile)
+À déposer dans le repo (ou dans le fichier de suivi prévu) :
+- Résumé (5 lignes)
+- 3 forces
+- 3 problèmes bloquants (avec preuves)
+- 5 suggestions actionnables (priorisées)
+- Questions ouvertes (si besoin)
+- “Risque principal si on rend comme ça”
 
 ---
 
-## 7) Jours de suivi (obligatoire)
+## 7) Soutenance orale (01/07/2026) : attentes
+- 30 à 40 minutes (respect strict).
+- Slides : support, pas roman.
+- Contenu attendu :
+  - Problématique + contexte
+  - Hypothèses + protocole
+  - Ce que disent les sources primaires (et limites)
+  - Ce que dit le podcast (et impact)
+  - Contre-arguments + falsification
+  - Décision LeadDev + plan de suite
+
+---
+
+## 8) Checkpoints (avec l’intervenant)
 ### 31/03/2026 — Checkpoint 1
 À montrer :
 - Sujet verrouillé + problématique.
 - H1/H2/H3 formulées.
 - 10 sources primaires shortlist.
-- Plan podcast + 2 contacts sollicités.
-- Proto squelette + scripts de repro démarrés.
+- Plan podcast + contacts sollicités.
+- Première version des tableaux (Hypothèses + Claims→Sources).
 
 ### 17/06/2026 — Checkpoint 2
 À montrer :
-- Podcast rendu (ok).
+- Podcast avancé (quasi final) + show notes.
 - MVT quasi final + tableaux complets.
-- Benchmarks exécutés + résultats.
-- Edge-case identifié + analyse.
-- Repo propre + ADR + journal complété.
+- Contre-arguments rédigés.
+- Repo propre (issues, ADR, journal, annexe IA).
+- Historique de reviews pair-à-pair à jour.
 
-
-
-
-Lien des consignes : https://docs.google.com/spreadsheets/d/1r4NhKrHoXoEDQ8BkNVyovwYAWRQChVH9/edit?gid=1009551376#gid=1009551376
