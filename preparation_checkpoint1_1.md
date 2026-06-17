@@ -12,6 +12,7 @@ Quelle approche (RAG, fine-tuning, agents) offre le meilleur compromis fiabilit�
 | H2 | Le fine-tuning ne se justifie que sur du contenu très spécialisé (jargon, formats atypiques) | Score de qualité sur questions spécialisées vs génériques | Comparaison RAG vs fine-tuning sur les deux types |
 | H3 | Un agent n'apporte pas de gain en Q&A documentaire simple, mais coûte plus cher et répond plus lentement | Latence, coût en tokens, score de qualité | Mêmes 30 questions, agent vs RAG |
 
+
 ## Sources primaires
 
 | # | Source | Quoi | Lien |
