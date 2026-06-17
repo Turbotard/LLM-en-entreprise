@@ -11,3 +11,6 @@ Un seul épisode avec un seul invité, écartée car elle gâcherait l'un des co
 
 ## Conséquences
 Deux show notes et deux montages à produire, mais une confrontation terrain plus riche pour H1, H2 et H3.
+
+## Problème 
+Aucuns des deux n'as répondu présents au réunions fixé dans leurs agendas, on essaye donc d'avoir un seul podcasts simple de environ 20 minutes
