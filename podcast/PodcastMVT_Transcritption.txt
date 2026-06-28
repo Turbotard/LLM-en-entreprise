@@ -1,0 +1,312 @@
+﻿PodcastMVT
+
+
+
+[00:06]
+Bonjour à toutes et à tous, aujourd'hui on se retrouve pour un nouveau podcast sur le sujet des LLM en entreprise, plus particulièrement sur quelle approche entre le RAG, le fine tuning ou bien l'agent offre le meilleur compromis entre fiabilité, coût et maintenabilité pour un LLM appliqué à un corpus documentaire d'entreprise. Aujourd'hui je serai accompagné de Mohan Makukeme, un chargé de projet au sein du CIG. Il est très fort dans tout ce qui est LLM et IA, Vous allez voir, il est très sympathique aussi. Bonne écoute. Alors, j'ai déjà ma première question, ça va être, est-ce que vous utilisez des LLM en entreprise?
+
+[00:47]
+Et si oui, depuis quand vous expérimentez les LLM?
+
+[00:51]
+Oui, les LLM sont utilisées au sein de notre établissement public, puisque nous, on est plutôt un établissement public, que ce soit Mais je vais revenir, nous on a mis en place pour éviter ce qu'on appelle le IA Shadow, peut-être que vous connaissez, c'est-à-dire l'IA Shadow c'est le fait d'aller sur Internet et d'utiliser tous les LLM qui sont disponibles de manière pas encadrée. Donc nous on a essayé de mettre en place un cadre juridique et un cadre utilisateur pour tous les agents du CIG. Puisque nous, on a des licences Microsoft, on a pu mettre en place et permettre à tous les agents du CIG Petit Coran d'utiliser le LLM de Copilot de Microsoft. Pour éviter que les agents puissent se connecter sur d'autres LLM. Comme vous le savez, il y a des questions aussi de souveraineté de la donnée.
+
+[01:52]
+Donc on a encadré, on a échangé avec des, comment dirais-je, des consultants de Microsoft qui nous ont assuré que les données ne sont pas utilisées pour réentraîner les modèles. Donc nous, on a basé notre stratégie sur une mise en place d'une charte, d'une doctrine IA. Donc c'est une charte pour encadrer l'utilisation des modèles. DIA, donc avec l'utilisation des, quand on utilise des données qui sont un peu sensibles, on anonymise les documents, on anonymise le prompt. Sinon, on évite de mettre des données sensibles, des données personnelles sur les modèles.
+
+[02:40]
+Voilà, c'était notre stratégie pour le, en tout cas dans l'utilisation des LLM génériques qui sont disponibles sur Internet.
+
+[02:48]
+Maintenant, j'ai une autre question. Est-ce que vous savez quels sont les plusieurs types de LLM ou bien pas du tout. Par exemple le fine tuning ou les agents, vous connaissez?
+
+[03:02]
+Oui mais ça c'est pas des LLM, ça c'est des méthodes qui permettent OK, je comprends, d'accord, je vois en fait comment vous m'avez posé les questions. Alors, les LLM, comme vous le savez, c'est des modèles d'IA génératives. C'est les derniers modèles d'IA qui sont sortis. Moi, quand j'étais étudiant, on travaillait surtout sur le deep learning. Maintenant, avec les LLM et l'IA générative, c'est une partie du deep learning, mais qui utilise un autre type de technologie, notamment ce qu'on appelle les transformers.
+
+[03:37]
+Et à partir de là, on entraîne des modèles et on a en sortie un modèle d'LLM, le premier étant ChatGPT. Donc ça, c'est les modèles d'LLM. Les types d'LLM, donc on a des LLM qui sont disponibles, encore une fois, c'est ce que je disais tout à l'heure sur Internet, donc on a les LLM, voilà, ChatGPT, Cloud, Gmini pour Google, Et copilot pour Microsoft. Donc ça, c'est l'élève le plus connu. Bon, on a bien sûr Mistral, le français.
+
+[04:10]
+On a des psychologues chinois. D'ailleurs, c'est l'élève le plus connu. On a par contre. Moi, j'ai, j'ai, j'ai envie de, de, un peu de, de faire la différence entre ces LLM là et les LLM open source, parce qu'on va y revenir. Nous, on est, on est en train d'expérimenter ce type d'LLM.
+
+[04:27]
+Alors, les LLM open source, c'est des LLM qu'on peut trouver sur Internet, qu'on peut déployer directement sur nos propres machines, soit sur nos propres serveurs ou bien sur nos, sur nos, sur nos machines personnelles et qui sont donc open source, donc qui, le code est fourni, c'est assez transparent et c'est assez souverain. Donc pour ces LLM là, je vous renvoie au site. J'oublie le site, c'est OLAMA. Donc sur le site OLAMA, vous pouvez trouver OLAMA étant une technologie qui permet de déployer ce type de LLM, donc des LLM open source qui sont déployables sur nos machines et qui nous permettent en fait de faire tourner les LLM directement en interne et pas besoin de transiter par les serveurs de Google pour. Pour Gemini ou pour d'autres, d'autres types de modèles.
+
+[05:16]
+Et après, pour ce que vous appelez vous les RAG, le fine tuning et les agents. Bon, déjà le RAG et le fine tuning, c'est deux méthodes qui permettent, qui permettent, pardon, pas d'entraîner, mais oui, d'entraîner pour le fine tuning, mais plutôt de, de, de donner un contexte très précis à un modèle LLM. On commence par le RAC, donc le RAC, c'est pour normalement Retrieval Automatique, quelque chose comme ça, Generation, quelque chose comme ça. Bon, j'ai oublié, en anglais, c'est typiquement une technique qui permet d'entraîner, pas d'entraîner, c'est pas le bon mot, mais de donner des données à un LLM et de lui permettre ou de l'autoriser à répondre qu'à travers ces données-là. C'est ça un RAC, c'est ça la méthode du RAC.
+
+[06:02]
+Le fine tuning est une méthode beaucoup plus poussée de ça, Et c'est une méthode qui permet de faire la même chose dans la mesure où on a des données en entrée pour un LLM. Par contre, la différence, c'est que le LLM est entraîné. C'est-à-dire qu'on va ré-entraîner derrière les LLM qui sont disponibles. Et ça, ça a un coût beaucoup plus important. Et des établissements comme nous, on ne peut pas se permettre de faire du fine tuning.
+
+[06:30]
+Parce que ça coûte très très cher et ça nécessite beaucoup de ressources, de ressources matérielles, mais c'est beaucoup plus puissant qu'un rag.
+
+[06:40]
+Et du coup ça vous dérange si par exemple je voulais vous poser des questions sur le rag ou le paint tuning?
+
+[06:46]
+Non, ça ne me dérange pas, c'était plutôt une petite définition comme ça on va rentrer après dans le sujet sur le rag avec plaisir.
+
+[06:52]
+Il n'y a pas de soucis. Du coup, vous m'avez dit que vous n'avez pas utilisé le front-ending, mais est-ce que vous avez déjà utilisé l'oracle? Je ne pense pas. Si.
+
+[07:02]
+Oui, parce qu'en fait, tout à l'heure, je vous ai fait une présentation du déploiement des LLM, plutôt le LLM co-pilote au sein des agents. Mais nous, en tant que DSC, on est en train de travailler sur un projet de mise en place d'une IR souveraine. Voilà définition de l'IA souveraine, c'est une IA qui est encadrée, c'est-à-dire où les ressources qu'on utilise sont des ressources transparentes, les modèles sont transparents, donc elles sont soit hébergées chez nous, soit hébergées chez, peut-être on va les héberger chez OVH aussi, qui est un cloud français. Donc dans le cadre de développement de cette IA souveraine, avec une interface graphique, avec des modèles open source, Nous travaillons aussi en parallèle sur un mini-REG sur un corpus documentaire de fiches et de textes de loi qui concerne la fonction publique territoriale.
+
+[07:54]
+Justement, ça amène à ma prochaine question. Ici, vous avez le droit, vu que vous m'avez parlé, que vous étiez sur un domaine public. Et comment vous utilisez ce REG dans votre corpus documentaire?
+
+[08:06]
+Comment? On utilise une technique de REG classique, c'est-à-dire qu'on a une base de données Le RAG fonctionne comme suit, donc on a une base de données, donc une base de données de manière générale, c'est encore plus documentaire, on parle de base de données. On a des modèles LLM qui tournent et on a une base de données vectorielle. Donc l'idée c'est de transformer ces données en en base vectorielle, plutôt de les stocker en base vectorielle et après de faire du roquettage sur ces données et de récupérer les bons, ce qu'on appelle les bons chunks qu'on a préalablement établis, c'est-à-dire on prend des données, on prend par exemple une fiche, on va la chunker, c'est-à-dire on va essayer de la découper en morceaux à travers un certain nombre de caractères. Pour ma fiche par exemple, moi j'ai travaillé sur 250 caractères, c'est une variable sur le code Python.
+
+[09:04]
+Donc on chunk la fiche en question et chaque partie du chunk est stockée en base vectorielle. Par contre, elle est stockée à travers un système d'embedding. Je ne sais pas ce que vous connaissez. Le embedding, c'est des modèles qui permettent de transformer un texte en base vectorielle, c'est-à-dire de permettre pour chaque mot, pour chaque token, de le transformer en vecteur en vrai. C'est un vecteur de mémoire de 25 000 dimensions.
+
+[09:43]
+En fait, c'est comme ça qu'on peut transposer, si vous voulez, les textes, tout ce qu'on produit pour une IA, c'est à partir d'une base vectorielle, à partir d'un système de embedding. Si on prend par exemple un chat ou un chien, le mot chat, par exemple, c'est H-A-T, est transformé en vecteur. Ce n'est pas vraiment le mot chat, il est découpé en deux, chaque partie de ce mot est transformée en vecteur de 25 000 dimensions. Et à partir de ces dimensions-là, on peut plus ou moins comprendre, l'IA peut comprendre entre guillemets, les différences entre chien et chat. Donc elle mesure si deux mots sont proches dans cette base vectorielle.
+
+[10:45]
+Là, c'est pour le modèle mathématique qui est derrière. Donc c'est pour ça que, pour revenir aux règles, donc on prend une fiche, on la découpe, on la chunk, donc chaque chunk est transformé avec un modèle d'embedding, donc c'est un LLM d'embedding qui transforme ce chunk en vecteur et le vecteur en question est stocké dans une base vectorielle. Ça, c'est la première étape. La deuxième étape, c'est qu'on puisse utiliser un LLM classique. On peut utiliser des LLM de chat GPT, on peut utiliser des LLM open source, Nous on utilise des LLM open source puisqu'on est dans le cadre de l'IA souveraine.
+
+[11:21]
+Et ces LLM là vont, on va envoyer une requête, un prompt en disant voilà j'aimerais que tu me dises, j'aimerais que tu me sortes une information précise qu'on sait qu'elle se trouve dans ces bases de données. Et donc cette requête est transformée elle aussi en vecteur. Elle est envoyée à un élève, et l'élève en question va aller voir dans la base de données pour rechercher la bonne réponse, c'est-à-dire le bon chunk qui renvoie à la bonne fiche, et derrière, il renvoie la réponse directement pour l'utilisateur. Voilà comment le système de RAG fonctionne.
+
+[11:58]
+Pour nos recherches sur notre MBT, on a pu voir qu'il y avait deux systèmes de RAG. Du coup, il y avait le RAG basique et le RAG avancé avec le ring-rank et la citation. Vous avez déjà comparé ces deux rags, du coup le rag des basiques avec le rag re-rank station. Est-ce que ça change en fiabilité niveau du re-rank et niveau du basique?
+
+[12:23]
+En fait, bon, citation, je ne sais pas c'est quoi, sincèrement. En fait, moi, j'ai travaillé sur le rag classique. Le rag classique, c'est ce que je vous ai décrit de manière un peu sommaire. Le rag re-ranking, oui, c'est une technique avancée, effectivement, qui permet de mémoire d'hybrider deux techniques de recherche. Une technique dite de recherche sémantique, une technique de, comment on appelle ça d'ailleurs, je ne sais plus comment, le mot exact, ce n'est pas la recherche sémantique, c'est l'autre recherche, je pense c'est lexical, quelque chose comme ça.
+
+[12:58]
+En fait, en gros, c'est que quand tu fais ta requête, tout à l'heure je te parlais de chat et chien, c'est important, c'est que chat et chien, dans une base vectorielle, ils ne sont pas très loin. Je sais pas ce que je veux dire. Ils sont pas très loin. Ça, c'est la recherche. Ça, ça utilise derrière une équation mathématique qui calcule en fait la différence entre les deux vecteurs, le vecteur du chat et le vecteur des chiens.
+
+[13:22]
+Et on voit un score en disant ça c'est proche, ça c'est pas. Les deux mots sont proches, les deux mots sont pas proches. Donc ça, c'est la première technique. La deuxième technique, c'est la technique normalement aussi lexicale. C'est qu'elle permet d'aller chercher directement à travers le mot qu'on lui a donné.
+
+[13:39]
+Donc moi, par exemple, dans le cadre, parce que le RAG, je disais, on est en train de travailler sur le RAG avec un prestataire, donc c'est lui qui normalement développera. On n'est pas encore là, mais c'est à lui de développer le RAG et il est payé pour ça. Moi, de mon côté, j'avais travaillé sur une expérimentation des fiches en question dont je vous ai parlé tout à l'heure. Et ces fiches. Donc, j'ai travaillé sur un tiers de ces fiches et moi, j'ai développé donc un RAC classique plus un RAC re-ranking.
+
+[14:06]
+Et donc, pour ces fiches, puisque je parlais tout à l'heure, si vous vous souvenez, que le RAC que j'ai développé, donc c'est un RAC plutôt qui s'entraîne, qui est alimenté par des données de la fonction publique territoriale. Voilà. Dans la fonction publique territoriale, il y a des lois, il y a des articles. Vous voyez, peut-être que vous connaissez, que vous connectez à l'IG France. Vous pouvez voir article 35 aligné à 2.
+
+[14:35]
+En fait, pour ce genre d'utilisation, il faut faire un système de re-ranking. Il faut faire un système qui recherche l'information directement une information sémantique, c'est-à-dire ce que je disais tout à l'heure, c'est le mot que je lui donne, il va chercher qu'est-ce qui se rapproche le plus de ce mot ou de cette requête. Et de deux, il va chercher le mot lexical, c'est article. Ça, il ne faut pas le découper. Quand on fait le chunking, il faut le laisser comme tel et il va aller chercher directement toute la phrase.
+
+[15:03]
+La phrase en question, c'est article 3, 35 aligné à 3, aligné à 2. Donc moi j'ai travaillé effectivement sur ces deux techniques, une technique qui est la technique standard, plus le système de re-ranking qui permet de faire une hybridation de recherche, recherche sémantique plus recherche lexicale, de mémoire normalement c'est lexicale. Voilà pour ça.
+
+[15:32]
+Et est-ce que par exemple, est-ce que c'est fiable selon vous, les deux versions sont au même niveau de fiabilité ou pas du tout?
+
+[15:40]
+Ouais, c'est un peu plus fiable le re-ranking parce que c'est ce que je disais, c'est plus fiable on va dire. J'ai déjà expliqué pourquoi parce que je disais pour la deuxième recherche, ça nous permet directement de retourner l'article, le nom de l'article et ça avec une technique basique, on n'a pas toujours le même résultat.
+
+[16:01]
+Et pour mesurer cette fiabilité, vous avez Comment vous faites pour mesurer cette fiabilité? Vous avez des trucs maison ou vous utilisez d'autres choses?
+
+[16:12]
+La fiabilité du règle?
+
+[16:14]
+Oui. Vous mesurez comment en fait cette fiabilité que vous apporte le règle?
+
+[16:20]
+De comparer les réponses. C'est-à-dire quand on lui demande quelque chose, on sait qu'est-ce qu'il doit répondre.
+
+[16:27]
+OK.
+
+[16:27]
+Voilà. Comme vous, par exemple, si vous prenez Si on travaille sur un modèle d'intelligence artificielle classique, on a 3000 photos, on va entraîner une IA sur 3000 photos de chats et après, à la fin, on va lui donner une photo de chat, on lui dit est-ce que c'est un chat ou pas. S'il a compris que c'est un chat, donc c'est fiable. S'il a compris que c'est un, s'il a dit que c'est un chien, c'est pas un chat. Donc là, il faut le réentraîner, plutôt le revoir ce qui n'a pas fonctionné.
+
+[16:52]
+Donc c'est assez classique pour voir est-ce que c'est plutôt pour connaître la fiabilité entre guillemets du modèle. Mais ça aussi, ça ouvre d'autres problématiques liées à la data. Mais bon, ça, je pense que c'est pas le sujet, mais la fiabilité, on la mesure comme ça.
+
+[17:11]
+Tout à l'heure, vous m'avez parlé que vous utilisez Python Tuning, mais je vais vous poser des questions sûres.
+
+[17:17]
+Pas de soucis.
+
+[17:18]
+Par exemple, quand est-ce que vous pouvez vous dire que le fine que le RAG ne fonctionnera pas et qu'il faudrait utiliser le fine tuning. C'est quoi le signal exactement?
+
+[17:30]
+Le fine tuning, je comprends la question, elle est un peu compliquée. Après, il y a la question de la fiabilité, c'est-à-dire si le RAG n'est pas fiable, peut-être qu'il faut réfléchir à d'autres méthodes. Je pense que c'est la première des choses. Deuxième des choses, je dirais aussi la quantité de données. Parce que nous, on travaille sur un corpus documentaire très encadré, très spécifique à la fonction publique territoriale.
+
+[17:52]
+Dans le cadre du fine tuning, déjà, de mémoire, les données sont beaucoup plus importantes. Les données sont beaucoup plus, j'allais dire, hétérogènes, c'est-à-dire qu'on peut travailler sur plusieurs types de sources de données, pas que des données de fonds. Je parlais tout à l'heure des données de la fonction publique territoriale et on peut travailler sur toutes les données de l'entreprise. Le fine tuning, c'est pour une entreprise, par exemple, qui travaille dans l'industrie, qui a plusieurs types de sources de données, qui veut aussi que leur modèle LLM soit assez puissant pour comprendre déjà toutes les sources de données, première des choses, et surtout d'avoir un langage très précis. Parce que quand je fais du fine tuning, Ton modèle va être très précis, même dans le vocabulaire qu'il va utiliser.
+
+[18:45]
+Et le vocabulaire entre l'industrie, la fonction publique territoriale ou la fonction publique d'État, d'ailleurs, n'est pas toujours le même. Donc, le signal, c'est un, c'est que le règle n'est pas fiable. Deux, après, je disais encore, je disais pour faire du fine tuning, quand même, il faut beaucoup de ressources. Donc, même si ce n'est pas fiable, nous, en tout cas, maintenant, aujourd'hui, dans l'état actuel des choses, On n'a pas la possibilité, ni l'argent, ni les ressources pour le faire.
+
+[19:14]
+Ça m'amène à ma dernière question sur le fine tuning. Vous dites que c'est très coûteux, que ce n'est pas très gérable, mais est-ce que vous aurez des exemples de coûts, de maintenabilité, à quel point ce n'est pas maintenable, à quel point c'est cher pour une entreprise?
+
+[19:32]
+Ça, c'est par rapport à mes petites recherches. Peut-être qu'il faudrait les mettre à jour, mais je sais que déjà, pour normalement juste entraîner un modèle, ça se chiffre en millions d'euros. Oui, c'est vraiment très, très normalement. Encore une fois, c'est ce que je disais, parce que comme vous le savez, vous êtes beaucoup plus dans le domaine que moi. Mais l'IA, maintenant, ça avance à des vitesses fulgurantes.
+
+[19:56]
+Donc, ça change, ça change entre 3 à 6 mois. 6 Mois, t'as des changements. Structurons. Voilà, donc on va dire ça, c'est que moi, des dernières informations que j'ai eues, c'est environ, ça peut chiffrer à un million d'euros pour vraiment fine tuning un modèle complet avec plusieurs milliards de paramètres par contre. C'est pas des petits modèles, c'est des gros modèles.
+
+[20:21]
+Exactement, c'est des gros modèles. Et pour maintenir ça, donc il te faut une infrapuissante, de la GPU, C'est lourd, c'est lourd à mettre en place. Après, je pense qu'il y a des établissements privés qui peuvent se le permettre. Nous, on ne peut pas.
+
+[20:37]
+Est-ce que, par exemple, comme établissement privé, on pourrait dire un cabinet d'avocats qui, lui, doit travailler sur des trucs spécifiques à eux?
+
+[20:46]
+Oui, c'est une bonne idée. Un cabinet d'avocats, des consultants qui ont leur propre vocabulaire, qui ont encore plus de... Parce que c'est toute une question de données aussi. Comme vous l'avez bien compris, le fine tuning nécessite d'avoir quand même beaucoup de données pour qu'on puisse bien alimenter notre modèle, pour qu'il puisse bien être fiable. Si on a peu de données, il n'y a pas vraiment beaucoup d'intérêt à faire ça.
+
+[21:09]
+Maintenant, on va passer sur la question des agents. Est-ce que vous utilisez des agents LLM en production ou c'est encore expérimental?
+
+[21:21]
+Oui, j'ai déjà répondu à la question. Donc les LLM, c'est plutôt, je pense qu'on peut appeler ça en production, mais plutôt sur le web. Les LLM qu'on utilise, plutôt tous les agents utilisent Copilot et Copilot est déjà très présent sur le web. En production, je comprends ce que vous voulez dire. C'est par rapport, par exemple, au projet qu'on est en train de mener.
+
+[21:39]
+C'est pas encore en prod. On est encore en phase de, même pas de recette, on est en train de développer encore. Je pense qu'on va être livré d'ici dix jours. Je vais voir les dates, mais d'ici un maximum de deux semaines, on va commencer à mettre en prod. On n'a pas encore mis en prod les modèles, mais ça va venir.
+
+[21:59]
+Est-ce que pour vous, la latence et les coûts des agents, c'est un frein ou pas du tout? Par exemple, on dit des tokens, tout ça.
+
+[22:07]
+Déjà, pour vous, c'est quoi des agents?
+
+[22:09]
+Par exemple, un agent, c'est le type Claude, tout ça, qui est là pour vous assister un peu au quotidien. Et qui permet de répondre à vos questions, que ce soit basique ou plus poussé. On peut prendre avec des formules P1, tout gratuite. Et en fonction des questions que vous posez, vous avez des tokens qui permettent de gérer votre abonnement en disant avec quel token vous payez tant, etc. Ah, d'accord.
+
+[22:34]
+Parce que c'était pas moi la définition que j'avais. Donc les agents pour vous, c'est plutôt les LLM. C'est-à-dire que c'est les LLM qu'on utilise actuellement sur le web. Et voilà, si on prend Cloud, Effectivement, on a un certain nombre de tokens, donc de contexte entre parenthèses aussi, qu'on peut utiliser et quand on l'a dépassé, il faudra payer des jetons pour utiliser et avoir un peu plus de, c'est ça, de disponibilité pour l'utiliser. Moi, je croyais que vous parliez des agents de l'IA argentique.
+
+[23:00]
+OK, donc j'ai bien fait de poser la question. En fait, un agent, en tout cas, si je suis votre définition, c'est un LLM standard. C'est un LLM standard, c'est ça un agent. Après il y a des LLM standard type Claude par exemple, si je prends Claude, ça devient un agent, je comprends l'idée, c'est quand on lui donne des... Des options.
+
+[23:23]
+On lui dit, tu peux aller sur Internet, me chercher cette information ou tu peux utiliser tel type de données ou tu peux faire... En fait, un agent, par définition, c'est la capacité d'un LLM de comprendre son environnement et de lui donner les outils qu'il peut utiliser dans le cadre de cet environnement et de le laisser faire. Les agences, en tout cas moi, comment on le conçoit, parce qu'on est en train de réfléchir aussi à développer des agents, En tout cas, moi, j'en ai développé quelques-uns, mais les agents, pour moi, c'est déjà autre chose que les LLM. Ça peut être plusieurs LLM, par exemple. Ça peut être plusieurs LLM qui communiquent contre eux de manière automatique.
+
+[24:05]
+Et un agent, après, peut-être que je fais confusion entre l'agent et l'agentique, mais c'est développé déjà avec ce qu'on appelle du long graph pour les développeurs, alors que pour l'ORAC, c'est du long chain, c'est deux bibliothèques pitons qui sont communes. Et ça permet, le langage permet ou les agents permettent d'automatiser, entre guillemets, un certain nombre d'opérations. Je te donne un exemple. Par exemple, tu as un agent qui tourne sur ta machine, qui récupère le dernier mail envoyé. Il tourne automatiquement, il vérifie à chaque fois que tu reçois un mail, il prend le mail, il le traduit en anglais et l'envoie automatiquement à quelqu'un que tu as prédéfini.
+
+[24:48]
+Ça, c'est un agent. Il fait ça automatiquement. Donc, à chaque fois, il se connecte, il regarde l'email et il fait ça. Ça, c'est un agent concret. Donc, un agent, ça utilise ce qu'on appelle la théorie des graphes.
+
+[24:58]
+C'est pour ça que ça s'appelle de long graphes, c'est-à-dire qu'il suit une logique de graphes et il va aller dans la première, comment dirais-je, la première étape, c'est vérifier l'email. Deuxième étape, regarder s'il y a de nouveaux mails ou pas. Troisième étape, s'il y a un nouveau mail, il le prend et le traduit. Donc, ça, ça utilise un LM. C'est ici que le LLM intervient, c'est-à-dire parce que c'est là où l'opération se fait.
+
+[25:21]
+Donc il traduit en anglais, comme je disais, ou en chinois, et l'envoie à quelqu'un de prédéfini, un agent ou un utilisateur prédéfini. C'est ça, on va dire, ce que fait un LLM. Et ta question, qu'est-ce que ça apporte, quelque chose par rapport à RAC, c'est que c'est différent. Il y a des règles agentiques, mais ça c'est autre chose. Mais un règle, c'est travailler sur des données, plus sur des données.
+
+[25:43]
+Donc c'est ça, on va dire l'apport, la plus-value, entre guillemets, d'un règle. Par contre, pour l'agent, la plus-value d'un agent, c'est d'automatiser des tâches. Je ne sais pas si vous voyez la différence, mais c'est ça en fait.
+
+[25:54]
+Je ne vois pas trop, si vous pourriez m'expliquer.
+
+[25:58]
+Pour un règle, c'était de prendre un agent, un LLM, et de l'entraîner sur des données, de l'entraîner, ce n'est pas le bon mot, mais lui donner des données, une source de données. Et l'idée, c'est que quand tu lui poses la question à cet agent, il va aller chercher dans les données que tu lui as données, que tu as fournies en entrée, et en sortie, il te donne une réponse par rapport à la question que tu lui as posée, uniquement par rapport à ces données. Est-ce que tu me suis? Ça, c'est l'oracle. L'agent en fait, ça permet d'automatiser des tâches.
+
+[26:28]
+J'ai pris l'exemple du mail, c'est-à-dire qu'il va aller se connecter à ta boîte mail, regarder est-ce que tu reçois un nouveau mail ou pas. Si tu ne reçois pas un nouveau mail, il ne va rien faire. Dès que tu reçois un nouveau mail, il prend le mail en question. C'est sa source de données, c'est juste ton mail. C'est pas une source de données, d'une base de données pour un RAC, c'est juste un mail.
+
+[26:48]
+Dans ce cas de figure là, il prend le mail. Je parlais de la tâche de traduire, donc le LLM va tourner. C'est ici que le LLM va tourner. Il va tourner, il va traduire. C'est comme prendre, par exemple, le mail que je t'ai envoyé, par exemple, pour planifier cette date, planifier ce point, ce podcast.
+
+[27:06]
+Tu prends ce mail-là, tu le prends comme tel, tu ouvres un LM, tu lui donnes, tu fais un prompt en disant traduis-moi ce texte, plus ou moins développer ton prompt et à la fin, en sortie, il va te donner la traduction. On est d'accord?
+
+[27:24]
+Oui, c'est ça. Voilà.
+
+[27:25]
+Donc, ton agent, il fait quoi? Il fait ça, il prend le mail, Il regarde à chaque fois qu'il fait des requêtes pour savoir si tu as reçu un mail ou pas. Dès que tu as reçu un mail, il va aller le prendre, il va aller se connecter au mail en question et il va aller faire un copier du mail. À la place d'aller sur Internet pour ouvrir un LLM et lui donner le texte, lui, il a déjà un LLM qui tourne avec un prompt déjà établi, pré-établi. Parce que ce que je te disais, c'est que l'agent, on l'a déjà pré-établi.
+
+[27:54]
+On a dit que notre agent, c'est pour traduire les mails. On est d'accord?
+
+[27:57]
+Oui, on est d'accord.
+
+[27:59]
+Donc le LLM en question, quand tu vas le développer, tu vas mettre un LLM open source Mistral, tu vas dire à Mistral, tu mets un prompt dans le code en disant à chaque fois que tu reçois un texte, c'est un mail et le mail en question, il faut le traduire en anglais. Donc tout est automatisé puisque le LLM, il sait déjà qu'est-ce qu'il va faire. Donc je relance l'opération, il va aller chercher un mail. Et le LLM en question, puisqu'on l'a prédéfinie par notre code, puisqu'on l'a codé, donc ici qu'il va traduire comment dirais-je, le mail en question en anglais, donc il le traduit en anglais, il tourne, à la place de tourner sur Internet, comme je te disais tout à l'heure, il va tourner dans le code. Dès qu'il a traduit le mail, il va l'envoyer parce que nous, on a quand on a codé notre agent, on lui a dit on voit, on voit, on voit le, je ne sais pas moi, au directeur, on voit le au DG, on voit le à X.
+
+[28:51]
+Voilà. Et lui, donc, il va faire cette opération. C'est ça un agent. Un agent, ça te permet d'automatiser des tâches. Je te donne un exemple beaucoup plus concret, qui est beaucoup plus vrai que cet exemple.
+
+[29:01]
+Par exemple, nous, on fait des réunions. Là, aujourd'hui, tu es en train de faire le podcast, tu es en train d'enregistrer le podcast. On est d'accord. Par exemple, tu vas développer un agent. Là, je parle d'un agent.
+
+[29:12]
+Il va faire quoi, ton agent? Il va, dès qu'on a lancé notre réunion sur Teams, en fait, on peut lancer une fonctionnalité qui permet de transcrire, de faire de la transcription du texte. Je ne sais pas ce que ça te parle, dès qu'on parle tous les deux. Teams, c'est assez intelligent pour comprendre que voilà, c'est des mots qu'on utilise, donc il va faire la transcription. Jusque là, tu me suis.
+
+[29:38]
+Donc en fait, je peux développer un agent qui fait quoi? L'agent, il va aller à chaque fois qu'il y a une réunion Teams, à chaque fois que la réunion Teams, il faut nous, quand on va commencer tous les deux la réunion Teams, on va lancer le transcript. Quand la réunion est finie, le transcript, on peut le télécharger. Jusque là, je me suis.
+
+[29:55]
+Oui, voilà.
+
+[29:57]
+Donc quand on utilise une télécharge de transcript, pardon, on peut le mettre sur un dossier. On dit voilà le transcript. Tous les transcripts des réunions Teams, on les met sur ce dossier. Là, tu développes un agent, tu lui dis, tu vas aller dans ce dossier, tu vas me chercher le dernier transcript qui a été posé. Le dernier transcript, c'est notre transcript à un ou deux.
+
+[30:14]
+On est en train d'échanger, donc c'est le transcript de cette réunion. Tu vas aller me chercher ce transcript. Par exemple, tu le synthétise, tu fais une synthèse, tu fais un compte rendu. Donc là, le LLM, il va tourner, il va prendre tout le transcript, il va le lire et il va faire un compte rendu de notre réunion d'aujourd'hui, de notre point, notre podcast de maintenant. Tu me suis?
+
+[30:35]
+Et après, tu lui dis, tu l'envoies par exemple aux personnes qui ont assisté au podcast ou à la réunion en question. Donc là, quand on aura fini tous les deux, l'agent, il va faire quoi? On sait que le transcript, il faut le mettre sur un dossier. Donc moi, je vais prendre le transcript. Je le mets dans un dossier.
+
+[30:53]
+Donc il y a un agent qui va tourner derrière. Il va aller chercher le transcript et le prend et le lit. Il fait un compte rendu et le compte rendu est en fichier Word. Je peux lui dire d'être en fichier Word. Il fait un fichier Word et le fichier Word, il est envoyé automatiquement à Esteban et à moi.
+
+[31:10]
+Parce que c'est toi et moi qui avions participé ou plutôt animé cette réunion. Ça, c'est un agent. Donc un agent qu'on va appeler un agent de compte rendu Teams. C'est-à-dire, c'est un agent automatique. Dès qu'il y a une réunion Teams, dès que la réunion Teams est finie, Et le transcript est fait, il faut faire le transcript, entre parenthèses, c'est important.
+
+[31:30]
+Moi, j'ai mis le transcript sur un dossier où n'importe quel agent, on va lui dire, un agent, là, je parle des collaborateurs, parler en langage, je dis à n'importe quel collaborateur, OK, si tu veux faire un compte rendu, voilà ce que tu vas faire. Tu fais ta réunion Teams, tu lances la transcription dès le départ. Quand le transcript est fini, tu le mets dans tel dossier, tu précises quel dossier, et tout va se faire automatiquement. Parce qu'en fait, c'est là où l'agent IA LLM va intervenir. Il va faire quoi?
+
+[31:57]
+Il va aller chercher le transcript et l'envoyer aux personnes qui ont assisté à la réunion. C'est automatique. C'est ça, en fait, la différence entre un agent et un RAC. Je sais pas ce que tu veux. J'espère que tu m'as pu suivre cette fois-ci.
+
+[32:09]
+Oui, je t'ai suivi. En fait, je pense que j'avais trop confondu agent et LLM Team Cloud et tout ça. D'accord. Maintenant c'est plus clair.
+
+[32:17]
+Parfait.
+
+[32:18]
+Je passe à la question suivante. Par exemple, si un développeur doit construire une solution LLM fiable aujourd'hui, tu le conseillerais de partir sur quoi comme stack de départ entre drag, fine tuning et les agents?
+
+[32:35]
+En fait, ça dépend des ressources de données. Je ne peux pas proposer une solution de manière abstraite. Il faut toujours partir des données qu'on a au sein d'une entreprise. Il faut partir aussi de ses ressources. Je ne vais pas proposer à une collectivité qui n'a pas beaucoup d'argent de faire du fine-tuning, par exemple.
+
+[32:55]
+Dans la réalité, dans le monde on va dire idéal. Dans le monde idéal, je dirais fine tuning. C'est-à-dire si tu as de l'argent, si tu as des ressources, tu as beaucoup de sources de données, tu fais du fine tuning. Il n'y a pas mieux parce que tes modèles, tu vas les réentraîner beaucoup mieux. Ils vont vraiment comprendre le vocabulaire de ton entreprise.
+
+[33:15]
+Il va comprendre les liens entre les documents. Il va les créer lui-même. Ça, c'est très compliqué à faire. Donc pour moi, oui, il n'y a pas mieux que le fine tuning. Dans le monde idéal, pour n'importe quelle entreprise, c'est le fine tuning.
+
+[33:27]
+Néanmoins, En tant que chef de projet, et toi tu vas être un futur chef de projet ou un futur lead de développeur, il faut toujours partir un des sources de données de ton entreprise et de ses moyens. Et quand je dis des ressources, c'est les ressources humaines, même si j'aime pas beaucoup ce mot, c'est-à-dire les agents, les développeurs que t'as en main, c'est-à-dire est-ce qu'ils peuvent faire du fine tuning ou pas, ou bien ils sont plus adaptés pour faire du RAG, ils ont plus des compétences pour un RAG parce que c'est pas le même code, c'est pas la même technologie. Première des choses, partir des ressources matérielles, c'est-à-dire est-ce que ton entreprise a beaucoup d'argent à investir pour du fine-tuning. Troisième des choses, c'est les ressources de données. Si tu n'as pas de ressources de données, ce n'est pas la peine de faire du fine-tuning, tu vas payer beaucoup d'argent pour un résultat qui n'est pas fameux parce que tu n'as pas beaucoup de données à fournir à ton modèle LLM.
+
+[34:20]
+Le stack de départ, c'est toujours partir des conditions, on va dire matérielles, des entreprises, des agents qui travaillent, c'est-à-dire des agents, pardon, des collaborateurs, de leurs compétences, des ressources, des ressources matérielles, c'est-à-dire combien ils peuvent mettre d'argent, de budget, est-ce qu'ils vont prendre le temps de le faire ou pas, parce que des fois, il y a des entreprises qui sont pressées d'avoir des résultats rapides, donc il ne faut pas faire du fine tuning dans ce cas. Donc, de ça, et troisièmement, qui est pour moi le plus important, c'est les ressources, pardon, les sources de données et aussi leur richesse. Il faut que les données soient bien structurées, bien propres, de qualité. Voilà, on va dire, ce serait ça pour moi, les conseils que je donnerais.
+
+[35:06]
+On va passer à la dernière question. C'est dans un futur proche, du coup, entre 2 et 5 ans. Ce serait lequel le plus avantageux entre le reg et l'agent? Parce que tu m'as parlé de donner tout ça, mais est-ce que, par exemple, dans le futur, il n'y aura pas un truc qui ferait que l'agence serait plus... Serait plus avantageux que le RAR?
+
+[35:30]
+Plus avantageux, oui. En fait, pour être franc avec toi, de toute façon, on en a parlé pendant le podcast, c'est que c'est très compliqué de... C'est très compliqué d'anticiper les changements qui... Tu vois, des changements qui s'opèrent au niveau de l'IA, de ses développements, de ses bouleversements. Là on voit, je sors un peu peut-être du sujet, mais tu n'as peut-être pas vu les informations sur le nouveau Cloud qui est sorti, le nouveau Cloud Mythos qui a été interdit maintenant.
+
+[36:00]
+Quand tu vois ce type d'informations, est-ce qu'il va y avoir une régularisation des LLM ou pas? En fait, c'est compliqué de prédire, on va dire, dans quelle trajectoire les LLM vont partir, même si on essaye, en tout cas personnellement, j'essaie de lire, de suivre un peu les informations, de suivre, on va dire, les personnes les plus, voilà, les tendances et plutôt les personnes les plus compétentes pour ça. Donc personnellement, bon, pour répondre à ta question, moi, je pense qu'on va aller de plus en plus dans des systèmes automatisés. On va aller de plus en plus vers de l'automatisation, maintenant par exemple je peux te parler des MCP peut-être, je sais pas ce que ça te parle, les serveurs MCP, tu pourras regarder après, c'est une technique aussi, c'est des serveurs qu'on peut installer directement sur machine et qui remplacent maintenant d'ores et déjà le RAG. Parce que t'as pas besoin de chanker, t'as pas besoin de faire un rack, t'as pas besoin de prendre des données, de les chanker, de les transformer en vecteurs, de les mettre sur une base de données vectorielle, tu vois tout ça.
+
+[37:03]
+Maintenant avec le MCP, c'est un serveur, il se connecte, il prend, qui fait tourner un modèle LLM, qui va se connecter à une base de données, il est assez intelligent pour comprendre la base de données en question et te retourner la réponse que t'as. T'as demandé, voilà la réponse que tu cherchais. Donc, on va dire pour moi, dans 2-3 ans, on ira vers de plus en plus d'automatisation, des modèles très puissants qui ne vont pas nécessiter de les fine-tuning ou de développer des règles ponctuelles sur des bases de données ou des ressources de données ponctuelles. Donc, pour moi, ça sera la tendance, à mon avis. Après, je disais au préambule que c'est très compliqué à apprendre.
+
+[37:42]
+Exactement.
+
+[37:45]
+Exactement exactement voilà pour moi tout est.
+
+[37:49]
+Bon on a répondu à toutes les questions merci déjà de ta présence et d'avoir répondu pour ce podcast et je te souhaite une bonne journée Voilà, c'était tout pour le podcast sur l'élément entreprise accompagné de Mohamed Makoukené. Merci de nous avoir écoutés.
