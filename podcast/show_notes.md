@@ -2,7 +2,7 @@
 
 **Titre :** LLM en entreprise, RAG, fine-tuning et agents, le point de vue d'un établissement public
 **Invité :** Mohand Makhoukhene, chargé de projet au CIG (fonction publique territoriale)
-**Date :** à confirmer
+**Date :** 24 juin 2026 
 **Durée :** environ 38 minutes
 
 ## 5 takeaways
