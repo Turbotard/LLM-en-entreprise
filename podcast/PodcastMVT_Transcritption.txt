@@ -3,7 +3,7 @@
 
 
 [00:06]
-Bonjour à toutes et à tous, aujourd'hui on se retrouve pour un nouveau podcast sur le sujet des LLM en entreprise, plus particulièrement sur quelle approche entre le RAG, le fine tuning ou bien l'agent offre le meilleur compromis entre fiabilité, coût et maintenabilité pour un LLM appliqué à un corpus documentaire d'entreprise. Aujourd'hui je serai accompagné de Mohan Makukeme, un chargé de projet au sein du CIG. Il est très fort dans tout ce qui est LLM et IA, Vous allez voir, il est très sympathique aussi. Bonne écoute. Alors, j'ai déjà ma première question, ça va être, est-ce que vous utilisez des LLM en entreprise?
+Bonjour à toutes et à tous, aujourd'hui on se retrouve pour un nouveau podcast sur le sujet des LLM en entreprise, plus particulièrement sur quelle approche entre le RAG, le fine tuning ou bien l'agent offre le meilleur compromis entre fiabilité, coût et maintenabilité pour un LLM appliqué à un corpus documentaire d'entreprise. Aujourd'hui je serai accompagné de Mohand Makhoukhene, un chargé de projet au sein du CIG. Il est très fort dans tout ce qui est LLM et IA, Vous allez voir, il est très sympathique aussi. Bonne écoute. Alors, j'ai déjà ma première question, ça va être, est-ce que vous utilisez des LLM en entreprise?
 
 [00:47]
 Et si oui, depuis quand vous expérimentez les LLM?
