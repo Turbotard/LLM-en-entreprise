@@ -1,7 +1,7 @@
 # Show notes — Podcast MVT LLM en entreprise
 
 **Titre :** LLM en entreprise, RAG, fine-tuning et agents, le point de vue d'un établissement public
-**Invité :** Mohan Makukeme, chargé de projet IA au CIG (fonction publique territoriale)
+**Invité :** Mohand Makhoukhene, chargé de projet IA au CIG (fonction publique territoriale)
 **Date :** à confirmer
 **Durée :** environ 38 minutes
 
